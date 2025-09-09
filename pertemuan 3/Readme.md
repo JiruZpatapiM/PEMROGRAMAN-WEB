@@ -43,7 +43,7 @@
 - Menu navigasi di kanan: Beranda, Tentang Saya, Proyek, Kontak.
 - class="active" pada Beranda artinya menu ini sedang aktif (kita berada di halaman beranda).
 
-````Bagian Hero
+```Bagian Hero
 <section class="hero">
   <h2>Halo, Saya <span>JiruZpatapiM</span></h2>
   <p>
@@ -190,6 +190,7 @@ body {
   margin-bottom: 20px;
 }
 ```
+
 - .social-media → bagian heading sosial media rata tengah.
 - margin-top: 40px; → beri jarak ke atas dari elemen sebelumnya.
 - Judul (h2) berwarna putih & ada jarak ke bawah.
@@ -206,6 +207,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 ```
+
 - Kotak untuk menampung semua ikon sosmed.
 - background: #00334d; → warna biru tua.
 - padding: 20px; → ruang dalam.
@@ -242,6 +244,7 @@ body {
 ```
 
 Memberi warna khas sesuai brand:
+
 - YouTube → merah
 - Instagram → pink keunguan
 - TikTok → hitam
@@ -293,12 +296,7 @@ Memberi warna khas sesuai brand:
 
 - .gallery-card → kotak berisi foto-foto game.
 - Pakai CSS Grid → otomatis membentuk kolom berdasarkan ukuran layar (auto-fit).
-- Setiap gambar:
-                - width: 100% → penuh satu kotak grid.
-                - height: 200px → tinggi gambar.
-                - object-fit: cover → gambar dipotong biar proporsional.
-                - cursor: pointer → bisa diklik.
-                - Efek hover: sedikit membesar + bayangan.
+- Setiap gambar: - width: 100% → penuh satu kotak grid. - height: 200px → tinggi gambar. - object-fit: cover → gambar dipotong biar proporsional. - cursor: pointer → bisa diklik. - Efek hover: sedikit membesar + bayangan.
 
 ```Pop Up Gambar
 .modal {
@@ -345,7 +343,9 @@ Memberi warna khas sesuai brand:
 - Tidak lebih dari 90% layar.
 - Sudut melengkung.
 - .close → tombol "×" untuk menutup modal.
-                - Posisinya di pojok kanan atas.
-                - Ukuran besar (40px) agar mudah diklik.
+- Posisinya di pojok kanan atas.
+- Ukuran besar (40px) agar mudah diklik.
 
-````
+```
+
+```
