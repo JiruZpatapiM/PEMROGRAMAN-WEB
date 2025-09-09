@@ -2,193 +2,350 @@
 
 # ANALISIS BIOGRAFI
 
-1. Bagian awal html
+1. portofolio.html
 
-```html
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Saya</title>
-  </head>
-</html>
+```Bagian Header
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="portofolio.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
 ```
 
-Program portofolio ini dibuat dengan menggunakan HTML sebagai kerangka dasar dan CSS sebagai pengatur tampilan. Struktur HTML diawali dengan deklarasi <!DOCTYPE html> yang menandakan dokumen ini menggunakan standar HTML5. Tag <html lang="id"> menunjukkan bahwa bahasa utama yang digunakan adalah Bahasa Indonesia. Pada bagian <head> terdapat beberapa pengaturan penting, yaitu meta charset UTF-8 agar halaman dapat menampilkan karakter khusus, meta viewport untuk membuat tampilan lebih responsif di berbagai perangkat, serta judul halaman yang ditulis pada tag <title> dengan teks “Portofolio Saya”.
+- charset="UTF-8" → supaya teks bisa tampil dengan baik (termasuk huruf Indonesia).
+- viewport → agar halaman bisa menyesuaikan di HP dan laptop.
+- title → judul halaman (muncul di tab browser).
+- style.css → CSS utama untuk semua halaman.
+- portofolio.css → CSS tambahan khusus halaman beranda.
+- font-awesome → dipakai untuk menampilkan ikon sosial media.
 
-2. Bagian CSS (Style)
-
-```html
-<body { font-family: Arial, sans-serif; background-color:pink; text-align:
-center; margin: 0; padding: 0; }
-```
-
-Mengatur gaya dasar halaman: font Arial, latar belakang pink, teks rata tengah, margin & padding nol.
-
-```html
-<header { padding: 30px; background-color: pink; color: white; }
-```
-
-Bagian header diberi padding, background pink, dan teks berwarna putih.
-
-```html
-<profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit:
-cover; border: 3px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-```
-
-Foto profil dibuat lingkaran (border-radius 50%), dengan ukuran tetap 150x150, diberi bingkai putih, dan bayangan agar tampak menonjol.
-
-```Html
-<social a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  background: white;
-  color: #ff4da6;
-  border: 2px solid #ff4da6;
-  transition: 0.3s;
-}
-.social a:hover {
-  background: #ff4da6;
-  color: white;
-}
-```
-
-Tombol media sosial dibuat oval, dengan warna dasar putih dan border pink. Saat hover (disorot mouse) warnanya berubah menjadi pink dengan teks putih.
-
-```Html
-.about-box {
-  max-width: 700px;
-  margin: 20px auto;
-  background: white;
-  border: 2px solid pink;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: left;
-}
-```
-
-Bagian Tentang Saya + Pendidikan ditampilkan dalam kotak putih dengan border pink, sudut melengkung, bayangan lembut, dan posisi di tengah halaman.
-
-```Html
-.edu-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-.edu-table th, .edu-table td {
-  border: 1px solid pink;
-  padding: 8px;
-  text-align: left;
-}
-.edu-table th {
-  background: #ff4da6;
-  color: white;
-}
-.edu-table tr:nth-child(even) {
-  background: #ffe6f0;
-}
-```
-
-Tabel Latar Belakang Pendidikan dibuat penuh lebar, border pink, baris genap diberi warna latar berbeda (striping), header berwarna pink dengan teks putih
-
-3. Bagian Header
-
-```Html
+```Bagian Header + Navigasi
 <header>
-  <img src="Astri.jpg.jpg" alt="Foto Profil" class="profile-pic">
-  <h1>Halo, I'm Astri 🌸</h1>
-  <p>💕</p>
+  <nav>
+    <a href="portofolio.html" class="logo">
+      <img src="picture/logo.png" alt="JRZ Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="portofolio.html" class="active">Beranda</a></li>
+      <li><a href="about.html">Tentang Saya</a></li>
+      <li><a href="project.html">Proyek</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+    </ul>
+  </nav>
 </header>
 ```
 
-Menampilkan foto profil bulat, nama pemilik portofolio, dan ikon hati 💕.
+- Bagian ini adalah menu navigasi di atas.
+- Ada logo di sebelah kiri.
+- Menu navigasi di kanan: Beranda, Tentang Saya, Proyek, Kontak.
+- class="active" pada Beranda artinya menu ini sedang aktif (kita berada di halaman beranda).
 
-4. Bagian tentang saya
+````Bagian Hero
+<section class="hero">
+  <h2>Halo, Saya <span>JiruZpatapiM</span></h2>
+  <p>
+    Seorang pria yang minat dalam bidang Desain UI/UX Game dan Desain Grafis
+  </p>
+</section>
+```
 
-```Html
-<section class="about-box">
-  <h2>Tentang Saya</h2>
-  <div class="bio-info">
-    <p><b>Nama:</b> Sulastri</p>
-    <p><b>Pendidikan:</b> Mahasiswa Teknik Komputer (Angkatan 2024)</p>
-    <p><b>Minat:</b> Teknologi, Desain Web, dan Pengembangan Aplikasi</p>
-    <p><b>Hobi:</b> Nonton TikTok</p>
+- Ini adalah bagian perkenalan singkat.
+- Ada teks sapaan: “Halo, Saya JiruZpatapiM”.
+- <span> digunakan untuk memberi gaya berbeda pada nama.
+- Ada deskripsi singkat tentang minat kamu.
+
+```Bagian Game Gallery
+<section class="game-gallery">
+  <h2>Game Gallery</h2>
+  <div class="game-container">
+    <div class="game-item">
+      <img src="picture/game1.jpg" alt="Game 1">
+      <h3>Game 1</h3>
+      <p>Deskripsi singkat game 1</p>
+    </div>
+    <!-- Tambahkan item game lainnya di sini -->
   </div>
-  <div class="bio-desc">
-      Saya adalah pribadi yang bersemangat dalam mempelajari hal-hal baru di bidang teknologi.
-      Bagi saya, dunia digital adalah ruang tanpa batas untuk berkreasi dan berinovasi.
-      Saya ingin terus mengembangkan keterampilan dalam pemrograman, desain antarmuka,
-      dan membangun aplikasi yang bermanfaat.
-      Harapan saya ke depan adalah menjadi seorang profesional yang bisa menginspirasi
-      dan berkontribusi dalam dunia teknologi. 🌸
-    </div>
+</section>
 ```
 
-Bagian konten utama ditampilkan dalam sebuah kotak dengan class .about-box. Kotak ini memiliki background putih, border pink, sudut membulat, serta bayangan halus sehingga tampil lebih menarik. Di dalamnya terdapat informasi tentang pemilik portofolio, seperti nama, pendidikan, minat, dan hobi. Terdapat pula deskripsi singkat mengenai kepribadian, semangat belajar, serta harapan di masa depan.
+- Ini adalah bagian galeri game.
+- Ada judul: “Game Gallery”.
+- Di dalamnya ada beberapa game dengan foto dan deskripsi singkat.
 
-5. latar belakang pendididkan
-
-```Html
-<h2>Latar Belakang Pendidikan</h2>
-    <table class="edu-table">
-      <tr>
-        <th>Tahun</th>
-        <th>Jenjang</th>
-        <th>Institusi</th>
-      </tr>
-      <tr>
-        <td>2012 - 2018</td>
-        <td>Sekolah Dasar</td>
-        <td>SDNK Rante Padang</td>
-      </tr>
-      <tr>
-        <td>2018 - 2021</td>
-        <td>SMP</td>
-        <td>MTSG Gandeng</td>
-      </tr>
-      <tr>
-        <td>2021 - 2024</td>
-        <td>SMK</td>
-        <td>SMK Negeri 4 Enrekang</td>
-      </tr>
-      <tr>
-        <td>2024 - Sekarang</td>
-        <td>Universitas</td>
-        <td>Universitas Negeri Makassar</td>
-      </tr>
-    </table>
-    </section>
+```Bagian Pop Up Gambar
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage" />
+</div>
 ```
 
-Riwayat pendidikan ditampilkan dalam bentuk tabel dengan class .edu-table. Tabel ini berisi tiga kolom utama, yaitu tahun, jenjang pendidikan, dan institusi. Tampilan tabel diperindah dengan border berwarna pink, header berwarna pink dengan teks putih, serta pewarnaan bergantian pada baris genap agar mudah dibaca. Informasi yang dimasukkan meliputi pendidikan dari tingkat sekolah dasar hingga universitas, sehingga pembaca dapat melihat perjalanan pendidikan secara jelas dan terstruktur.
+- Bagian ini adalah jendela pop-up yang muncul saat kita klik gambar di galeri.
+- <span class="close">×</span> → tombol untuk menutup modal.
+- Gambar yang dibuka akan dimasukkan ke id="modalImage".
 
-6. Ikuti Akun Sosmed
-
-```Html
-<section>
-    <h2>Ikuti Saya</h2>
-    <div class="social">
-    <a href="https://www.instagram.com/zastri_naji?igsh=OW81YWI0cGthYjcy"target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@zastri.naji?_t=ZS-8zYcOpOJEDY&_r=1" target="_blank">TikTok</a> <a href="https://wa.me/6285249538797" target="_blank">WhatsApp</a>
-    <a href="https://github.com/Astriii123" target="_blank">Github</a>
-    </div>
-    </section>
+```Bagian Sosial Media
+<section class="social-media">
+  <h2>Sosial Media</h2>
+  <div class="social-container">
+    <a href="https://www.instagram.com/jiruzpatapi/" target="_blank" class="social instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@jiruzpatapi" target="_blank" class="social tiktok">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.linkedin.com/in/jiruzpatapi/" target="_blank" class="social linkedin">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+  </div>
+</section>
 ```
 
-Pada bagian Ikuti Saya, ditampilkan beberapa tautan ke media sosial pemilik portofolio, seperti Instagram, TikTok, WhatsApp, dan GitHub. Tautan tersebut ditampilkan dalam bentuk tombol oval dengan warna dasar putih, teks pink, serta border berwarna pink. Efek hover digunakan sehingga ketika kursor diarahkan ke tombol, warnanya berubah menjadi pink dengan teks putih. Hal ini memberikan kesan interaktif dan menarik perhatian pengguna untuk mengunjungi akun media sosial pemilik portofolio.
+- Ini adalah bagian sosial media.
+- Ada judul: “Sosial Media”.
+- Di dalamnya ada tombol untuk mengikuti Youtube, Facebook, Github, Instagram, TikTok, dan LinkedIn.
+- Setiap tombol memiliki ikon dan teks.
+- Klik tombol akan membuka profil atau halaman tersebut di jendela baru.
 
-7. footrer
-
-```Html
+```Bagian Footer
 <footer>
-<p>© 2025 Portofolio Astri</p>
+  <p>&copy; 2023 JiruZpatapiM. All rights reserved.</p>
 </footer>
 ```
 
-Bagian terakhir dari program adalah footer yang berisi teks “© 2025 Portofolio Astri.
+- Ini adalah bagian footer.
+- Ada teks copyright: “&copy; 2023 JiruZpatapiM. All rights reserved.”.
+- Teks ini biasanya muncul di bagian bawah halaman.
+
+```Bagian JavaScript (fungsi modal)
+<script>
+  function openModal(img) {
+    document.getElementById("imgModal").style.display = "flex";
+    document.getElementById("modalImage").src = img.src;
+  }
+  function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+  }
+</script>
+```
+
+- Bagian ini adalah JavaScript untuk membuat pop-up gambar.
+- Fungsi openModal(img) → ketika kita klik gambar, pop-up akan muncul dan gambar akan ditampilkan.
+- Fungsi closeModal() → ketika kita klik tombol tutup (×), pop-up akan hilang.
+
+2. portofolio.css
+
+```body
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+```
+
+- margin: 0; → hilangkan jarak default di browser.
+- font-family: Arial, sans-serif; → pakai font Arial (jika tidak ada, pakai font default sans-serif).
+- height: 100vh; → tinggi penuh layar.
+- background: linear-gradient(...) → latar belakang gradasi biru → cyan.
+- color: white; → teks default berwarna putih.
+- display: flex; flex-direction: column; → layout fleksibel berbentuk kolom (vertikal).
+
+```Hero Section
+.hero {
+  flex: 1;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero span {
+  color: yellow;
+}
+```
+
+- .hero → bagian perkenalan.
+- flex: 1; → ambil ruang yang tersisa di layar.
+- text-align: center; → isi ditengah.
+- padding: 100px 20px; → ada jarak ke dalam biar teks tidak terlalu mepet.
+- .hero h2 → ukuran judul besar.
+- .hero span → memberi warna kuning pada nama yang ditandai <span>.
+
+```Social Media Section
+.social-media {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-media h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+```
+- .social-media → bagian heading sosial media rata tengah.
+- margin-top: 40px; → beri jarak ke atas dari elemen sebelumnya.
+- Judul (h2) berwarna putih & ada jarak ke bawah.
+
+```Social Card Section
+.social-card {
+  background: #00334d; /* biru tua */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+```
+- Kotak untuk menampung semua ikon sosmed.
+- background: #00334d; → warna biru tua.
+- padding: 20px; → ruang dalam.
+- border-radius: 10px; → sudut membulat.
+- display: flex; flex-wrap: wrap; → ikon tersusun fleksibel, otomatis turun ke baris baru kalau layar sempit.
+- justify-content: center; → ikon rata tengah.
+- gap: 20px; → jarak antar ikon.
+- box-shadow → ada bayangan lembut di belakang kotak.
+
+```Ikon Social Media
+.social-card a {
+  font-size: 32px; /* ukuran icon */
+  color: white;
+  transition: 0.3s;
+}
+
+.social-card a:hover {
+  transform: scale(1.2);
+}
+```
+
+- Ikon (a) ukurannya besar (32px).
+- Default berwarna putih.
+- transition: 0.3s; → animasi halus ketika berubah.
+- :hover → ketika diarahkan kursor, ikon membesar (scale(1.2)).
+
+```Warna Khusus Tiap Ikon
+.social-card a .fa-youtube { color: #ff0000; }
+.social-card a .fa-instagram { color: #e1306c; }
+.social-card a .fa-tiktok { color: #010101; }
+.social-card a .fa-facebook { color: #1877f2; }
+.social-card a .fa-linkedin { color: #0a66c2; }
+.social-card a .fa-github { color: #fff; }
+```
+
+Memberi warna khas sesuai brand:
+- YouTube → merah
+- Instagram → pink keunguan
+- TikTok → hitam
+- Facebook → biru
+- LinkedIn → biru tua
+- GitHub → putih
+
+```Game Gallery
+.game-gallery {
+  text-align: center;
+  margin-top: 20px; /* posisi agak ke atas */
+}
+
+.game-gallery h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+```
+
+- Judul galeri rata tengah.
+- Ada jarak ke atas dari elemen sebelumnya.
+- Judul berwarna putih dan punya jarak ke bawah.
+
+```Grid Foto Game
+.gallery-card {
+  background: #00334d;
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+```
+
+- .gallery-card → kotak berisi foto-foto game.
+- Pakai CSS Grid → otomatis membentuk kolom berdasarkan ukuran layar (auto-fit).
+- Setiap gambar:
+                - width: 100% → penuh satu kotak grid.
+                - height: 200px → tinggi gambar.
+                - object-fit: cover → gambar dipotong biar proporsional.
+                - cursor: pointer → bisa diklik.
+                - Efek hover: sedikit membesar + bayangan.
+
+```Pop Up Gambar
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+```
+
+- .modal → pop-up layar penuh.
+- Awalnya display: none; → disembunyikan.
+- position: fixed; → menempel di layar meski discroll.
+- z-index: 9999; → berada di paling depan.
+- Latar belakang hitam semi transparan (rgba(0,0,0,0.9)).
+
+```Isi Modal dan Tombol Tutup
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+```
+
+- .modal-content → gambar yang ditampilkan di tengah modal.
+- Tidak lebih dari 90% layar.
+- Sudut melengkung.
+- .close → tombol "×" untuk menutup modal.
+                - Posisinya di pojok kanan atas.
+                - Ukuran besar (40px) agar mudah diklik.
+
+````
