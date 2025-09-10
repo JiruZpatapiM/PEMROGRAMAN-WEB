@@ -685,7 +685,7 @@ body {
 - border-radius: 10px; → Gambar sudutnya agak melengkung.
 - margin: 15px 0; → Spasi atas-bawah gambar agar tidak terlalu mepet dengan teks.
 
-  7.contact.html
+  7. contact.html
 
 ```Section Kontak
 <section class="contact">
@@ -718,7 +718,7 @@ body {
 
 8. contact.css
 
-````.contact
+```.contact
 .contact {
   display: flex;
   justify-content: center;
@@ -879,4 +879,3 @@ Konten Utama
 Footer
 
 - Footer didesain mirip header: latar gelap (#222), teks putih, dan posisi teks rata tengah. Tambahan margin-top: 30px memberikan jarak dari konten sebelumnya agar tidak menempel, serta padding: 15px membuat isi footer lebih lega.
-````
