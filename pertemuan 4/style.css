@@ -7,9 +7,16 @@ body {
 }
 
 body {
-  background: #f8f9fa;
-  color: #333;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    135deg,
+    #007bff,
+    #00d4ff
+  ); /* gradasi full dari atas ke bawah */
+  color: white;
+  min-height: 100vh;
 }
 
 /* Pastikan konten utama dorong footer ke bawah */
@@ -44,7 +51,7 @@ header {
   padding: 0;
   display: flex;
   align-items: center;
-  margin-left: auto; /* <=== dorong semua menu ke kanan */
+  margin-left: auto; /* dorong semua menu ke kanan */
 }
 
 .nav-links li {
@@ -113,4 +120,101 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background: transparent; /* biar nyatu dengan body */
+}
+
+.gallery h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background: none; /* Hapus background putih */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s;
+  border-radius: 12px; /* sudut foto tetap rapi */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.lightbox .prev {
+  left: 20px;
+}
+.lightbox .next {
+  right: 20px;
+}
+
+.lightbox .prev:hover,
+.lightbox .next:hover,
+.lightbox .close:hover {
+  color: #00d4ff;
 }
