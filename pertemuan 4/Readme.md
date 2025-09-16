@@ -9,6 +9,7 @@ Tujuan utama dari proyek ini adalah memberikan gambaran bagaimana cara membangun
 
 ## 📂 Struktur File
 
+```struktur
 pertemuan4/
 ├── gallery.html # Halaman utama galeri
 ├── style.css # File CSS untuk mengatur tampilan
@@ -17,6 +18,7 @@ pertemuan4/
 ├── about.html # (opsional) Halaman tentang saya
 ├── contact.html # (opsional) Halaman kontak
 └── images/ # Folder berisi koleksi foto
+```
 
 ---
 
