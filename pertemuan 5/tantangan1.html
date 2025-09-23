@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Konversi Tipe Data</title>
+  </head>
+  <body>
+    <h2>Konversi Tipe Data</h2>
+    <script>
+      let angka = "123A"; // string
+      let intAngka = parseInt(angka);
+      document.write(
+        "123A Ke Integer Adalah: " +
+          intAngka +
+          " (tipe: " +
+          typeof intAngka +
+          ")<br>"
+      );
+      let floatAngka = parseFloat(angka);
+      document.write(
+        "123A Ke Float Adalah: " +
+          floatAngka +
+          " (tipe: " +
+          typeof floatAngka +
+          ")<br>"
+      );
+    </script>
+  </body>
+</html>

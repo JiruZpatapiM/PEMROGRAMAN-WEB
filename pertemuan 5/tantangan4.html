@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hitungan Bangun Ruang</title>
+  </head>
+  <body>
+    <h2>Hitungan Bangun Ruang</h2>
+
+    <h3>Volume Kubus</h3>
+    <input type="number" id="sisi" placeholder="Sisi" />
+    <button onclick="hitungKubus()">Hitung</button>
+    <p>Hasil: <span id="vkubus"></span></p>
+
+    <h3>Volume Balok</h3>
+    <input type="number" id="p" placeholder="Panjang" />
+    <input type="number" id="l" placeholder="Lebar" />
+    <input type="number" id="t" placeholder="Tinggi" />
+    <button onclick="hitungBalok()">Hitung</button>
+    <p>Hasil: <span id="vbalok"></span></p>
+
+    <h3>Volume Lingkaran</h3>
+    <input type="number" id="r" placeholder="Jari-jari" />
+    <button onclick="hitungLingkaran()">Hitung</button>
+    <p>Hasil: <span id="vlingkaran"></span></p>
+
+    <script>
+      function hitungKubus() {
+        let s = parseFloat(document.getElementById("sisi").value);
+        document.getElementById("vkubus").innerText = Math.pow(s, 3);
+      }
+      function hitungBalok() {
+        let p = parseFloat(document.getElementById("p").value);
+        let l = parseFloat(document.getElementById("l").value);
+        let t = parseFloat(document.getElementById("t").value);
+        document.getElementById("vbalok").innerText = p * l * t;
+      }
+      function hitungLingkaran() {
+        let r = parseFloat(document.getElementById("r").value);
+        document.getElementById("vlingkaran").innerText =
+          (4 / 3) * Math.PI * Math.pow(r, 3);
+      }
+    </script>
+  </body>
+</html>
