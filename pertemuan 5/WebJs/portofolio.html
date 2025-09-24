@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="portofolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Beranda ▼</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="project.html" onclick="setPage('Pengalaman')"
+                >Pengalaman</a
+              >
+            </li>
+            <li>
+              <a href="about.html" onclick="setPage('Tentang Saya')"
+                >Tentang Saya</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" onclick="setPage('Gallery')">Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" onclick="setPage('Kontak')">Kontak</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Halo, Saya <span>JiruZpatapiM</span></h2>
+        <p>
+          Seorang pria yang minat dalam bidang Desain UI/UX Game dan Desain
+          Grafis
+        </p>
+      </section>
+
+      <section class="game-gallery">
+        <h2>Game Favorit Saya</h2>
+        <div class="gallery-card">
+          <img src="images/ml.jpg" alt="Game 1" onclick="openModal(this)" />
+          <img src="images/cs.jpg" alt="Game 2" onclick="openModal(this)" />
+          <img src="images/roblox.jpg" alt="Game 3" onclick="openModal(this)" />
+          <img src="images/fifa.jpg" alt="Game 4" onclick="openModal(this)" />
+        </div>
+      </section>
+
+      <!-- Modal Pop Up -->
+      <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage" />
+      </div>
+
+      <section class="social-media">
+        <h2>Temukan Saya di</h2>
+        <div class="card social-card">
+          <a
+            href="https://youtube.com/@mochammadrosiqreskipratama5847"
+            target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://instagram.com/kojirupatapim_" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://tiktok.com/@jiodarchy" target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a href="https://facebook.com/mochrosiq" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/mochammad-rosiq-rezki-pratama-1b9b50366/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/JiruZpatapiM" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 JiruZpatapiM</p>
+    </footer>
+
+    <script>
+      // Modal Gallery
+      function openModal(img) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("modalImage").src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+      }
+
+      // ====== Alert Pindah Halaman ======
+      function setPage(pageName) {
+        localStorage.setItem("pageAlert", pageName);
+      }
+
+      window.onload = function () {
+        const page = localStorage.getItem("pageAlert");
+        if (page) {
+          alert("Anda berhasil beralih ke halaman " + page);
+          localStorage.removeItem("pageAlert");
+        }
+      };
+    </script>
+  </body>
+</html>

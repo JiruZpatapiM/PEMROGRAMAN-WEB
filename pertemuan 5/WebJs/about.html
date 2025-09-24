@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+  <header>
+  <body>
+     <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+
+      <ul class="nav-links">
+  <li class="dropdown">
+    <a href="#">Tentang Saya ▼</a>
+    <ul class="dropdown-menu">
+      <li><a href="portofolio.html" onclick="setPage('Portofolio')">Portofolio</a></li>
+      <li><a href="project.html" onclick="setPage('Pengalaman')">Pengalaman</a></li>
+      <li><a href="gallery.html" onclick="setPage('Gallery')">Gallery</a></li>
+      <li><a href="contact.html" onclick="setPage('Kontak')">Kontak</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </header>
+
+
+    <section class="about">
+      <h2>Tentang Saya :</h2>
+
+      <!-- Foto Profil -->
+      <div class="profile-pic">
+        <img src= "images/profil.jpg" alt="Foto Profil" />
+      </div>
+
+      <!-- Card Biodata -->
+      <div class="card bio">
+        <p>
+          <span><strong>Email:</strong></span> yurieger9@gmail.com
+        </p>
+        <p>
+          <span><strong>Nomor Telepon:</strong></span> 085823361711
+        </p>
+        <p>
+          <span><strong>Alamat:</strong></span> Jl. Raya Makassar No. 123,
+          Makassar, Sulawesi Selatan
+        </p>
+        <p>
+          <span><strong>Pendidikan Sekarang:</strong></span> S1 Teknik
+          Komputer, Universitas Negeri Makassar
+        </p>
+        <p>
+          <span><strong>Pendidikan Terakhir:</strong></span>   <ul>
+    <li>SMK Negeri 1 Makassar, Jurusan Rekayasa Perangkat Lunak (2022 - 2025)</li>
+    <li>SMP Negeri 27 Makassar (2018 - 2021)</li>
+    <li>SD Negeri Unggulan Monginsidi 1 Makassar (2014 - 2017)</li>
+  </ul>
+        </p>
+      </div>
+
+      <!-- Card Deskripsi -->
+      <div class="card">
+        <p>
+          Saya adalah seorang mahasiswa Teknik Komputer Universitas Negeri Makassar Angkatan 2024 yang fokus di bidang Web
+          Development UI/UX.
+        </p>
+        <p>
+          Saya memiliki minat pada desain UI/UX untuk sebuah game interaktif,website ataupun aplikasi mobile dan saya juga memiliki minat pada bidang front-end programming.
+        </p>
+      </div>
+
+      <!-- Card GitHub Stats -->
+      <!-- Card GitHub Stats -->
+      <div class="card github-stats">
+        <h3>📊 My GitHub Stats</h3>
+        <div class="stats-container">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=JiruZpatapiM&theme=neon&hide_border=false&include_all_commits=true&count_private=false"
+            alt="GitHub Stats"
+          />
+
+          <img
+            src="https://nirzak-streak-stats.vercel.app/?user=JiruZpatapiM&theme=neon&hide_border=false"
+            alt="GitHub Streak"
+          />
+
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=JiruZpatapiM&theme=neon&hide_border=false&include_all_commits=true&count_private=false&layout=compact"
+            alt="Top Languages"
+          />
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 JiruZpatapiM</p>
+    </footer>
+<script>
+      // Modal Gallery
+      function openModal(img) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("modalImage").src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+      }
+
+      // ====== Alert Pindah Halaman ======
+      function setPage(pageName) {
+        localStorage.setItem("pageAlert", pageName);
+      }
+
+      window.onload = function () {
+        const page = localStorage.getItem("pageAlert");
+        if (page) {
+          alert("Anda berhasil beralih ke halaman " + page);
+          localStorage.removeItem("pageAlert");
+        }
+      };
+    </script>
+  </body>
+</html>

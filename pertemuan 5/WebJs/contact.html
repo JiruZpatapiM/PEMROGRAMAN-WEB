@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <header>
+  <body>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+
+      <ul class="nav-links">
+  <li class="dropdown">
+    <a href="#">Kontak ▼</a>
+    <ul class="dropdown-menu">
+       <li><a href="portofolio.html" onclick="setPage('Portofolio')">Portofolio</a></li>
+      <li><a href="project.html" onclick="setPage('Pengalaman')">Pengalaman</a></li>
+      <li><a href="about.html" onclick="setPage('Tentang Saya')">Tentang Saya</a></li>
+      <li><a href="gallery.html" onclick="setPage('Gallery')">Gallery</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </header>
+
+    <section class="contact">
+      <div class="card contact-card">
+        <h2>Hubungi Saya :</h2>
+        <form>
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="message">Pesan:</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 JiruZpatapiM</p>
+    </footer>
+    <script>
+      // Modal Gallery
+      function openModal(img) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("modalImage").src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+      }
+
+      // ====== Alert Pindah Halaman ======
+      function setPage(pageName) {
+        localStorage.setItem("pageAlert", pageName);
+      }
+
+      window.onload = function () {
+        const page = localStorage.getItem("pageAlert");
+        if (page) {
+          alert("Anda berhasil beralih ke halaman " + page);
+          localStorage.removeItem("pageAlert");
+        }
+      };
+    </script>
+  </body>
+</html>

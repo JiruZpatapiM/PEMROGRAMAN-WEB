@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyek</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <header>  
+  <body>
+     <div class="logo">
+       <img src="images/logo.png" alt="Logo" />
+      </div>
+
+      <ul class="nav-links">
+  <li class="dropdown">
+    <a href="#">Pengalaman ▼</a>
+    <ul class="dropdown-menu">
+      <li><a href="portofolio.html" onclick="setPage('Portofolio')">Portofolio</a></li>
+      <li><a href="about.html" onclick="setPage('Tentang Saya')">Tentang Saya</a></li>
+      <li><a href="gallery.html" onclick="setPage('Gallery')">Gallery</a></li>
+      <li><a href="contact.html" onclick="setPage('Kontak')">Kontak</a></li>
+    </ul>
+  </li>
+</ul>
+
+    </header>
+
+    <section class="projects">
+      <h2>Pengalaman Saya :</h2>
+
+      <div class="card project-card">
+        <h3>Pengalaman 1</h3>
+        <p>
+          Pernah Melakukan Magang di PT. Cahaya Surya selama 6 bulan dan
+          mendapatkan hasil yang sempurna.
+        </p>
+      </div>
+
+      <div class="card project-card">
+        <h3>Pengalaman 2</h3>
+        <p>
+          Pernah Melakukan kerja Part Time di CV. IQ Project selama 3 bulan
+          menjadi Mandor Magang.
+        </p>
+      </div>
+
+      <!-- Card Prestasi -->
+      <div class="card achievement-card">
+        <h3>Prestasi</h3>
+        <img src="images/prestasi.jpg" alt="Foto Prestasi" />
+        <p>
+          Saya mendapatkan prestasi dalam bidang E-Sport di game Mobile Legend
+          dengan mendapatkan juara 2 pada perlombaan Community Hero Skaone
+          Championship.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 JiruZpatapiM</p>
+    </footer>
+     <script>
+      // Modal Gallery
+      function openModal(img) {
+        document.getElementById("imgModal").style.display = "block";
+        document.getElementById("modalImage").src = img.src;
+      }
+
+      function closeModal() {
+        document.getElementById("imgModal").style.display = "none";
+      }
+
+      // ====== Alert Pindah Halaman ======
+      function setPage(pageName) {
+        localStorage.setItem("pageAlert", pageName);
+      }
+
+      window.onload = function () {
+        const page = localStorage.getItem("pageAlert");
+        if (page) {
+          alert("Anda berhasil beralih ke halaman " + page);
+          localStorage.removeItem("pageAlert");
+        }
+      };
+    </script>
+  </body>
+</html>
