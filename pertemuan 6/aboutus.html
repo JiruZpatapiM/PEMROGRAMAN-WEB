@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Pisang Roll Dhea</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "header-dark": "#2A4232",
+              "primary-green": "#386641",
+              "secondary-cream": "#F5F5DC",
+              "accent-yellow": "#FFC300",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?v=20250930_fix"></script>
+
+    <style>
+      body {
+        background-color: #f5f5dc !important;
+      }
+      header {
+        background-color: #2a4232 !important;
+      }
+      footer {
+        background-color: #2a4232 !important;
+      }
+      .font-brand {
+        font-family: "Georgia", serif;
+      }
+
+      /* CSS HOVER DITAMBAHKAN LAGI DENGAN SINTAKS RAPI */
+      .btn-single {
+        transition: all 0.3s ease;
+      }
+      .btn-single:hover {
+        background-color: #2a4232 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+      .btn-mix {
+        transition: all 0.3s ease;
+      }
+      .btn-mix:hover {
+        background-color: #ffaa00 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="text-gray-800 flex flex-col min-h-screen">
+    <header class="shadow-lg sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-white font-brand"
+              >Pisang Roll Dhea</span
+            >
+          </div>
+          <div class="sm:ml-6 sm:flex sm:space-x-8 items-center">
+            <a
+              href="index.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Beranda</a
+            >
+            <a
+              href="aboutus.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Tentang Kami</a
+            >
+            <a
+              href="menu.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Menu</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex-grow">
+      <section id="about" class="py-16">
+        <h2
+          class="text-4xl font-bold text-primary-green mb-8 text-center font-brand"
+        >
+          Tentang Pisang Roll Dhea
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div
+            class="p-6 md:p-8 rounded-xl shadow-lg"
+            style="background-color: #386641"
+          >
+            <p class="text-base leading-relaxed text-white mb-3">
+              Usaha Pisang Roll Dhea berawal pada tahun 2024, saat Dhea yang
+              masih berstatus mahasiswa baru, bersama teman-temannya mencari
+              cara mendanai acara pentas seni. Mereka memilih berjualan Piscok
+              (Pisang Cokelat) sederhana. Sambutan pasar terhadap piscok mereka
+              ternyata sangat positif. Namun, sempat terhambat masalah harga
+              dari acara Galdan pentas seni, Dhea mengambil inisiatif untuk
+              melanjutkan penjualan secara mandiri, dibantu oleh sang Ibu.
+              Awalnya masih menjual Piscok, tetapi potensi bisnis sudah terlihat
+              jelas.
+            </p>
+            <p class="text-base leading-relaxed text-white mb-4">
+              Titik balik terjadi setelah seringnya melihat tren kuliner di
+              media sosial. Terinspirasi untuk memberikan nilai lebih, Dhea
+              memutuskan untuk menginovasikan produk nya menjadi Pisang Roll
+              dengan berbagai pilihan topping kekinian. Langkah ini berhasil
+              membedakan produk mereka di pasar. Dengan menggabungkan cita rasa
+              rumahan yang otentik dari Piscok awal dengan inovasi topping
+              kekinian, lahirlah merek Pisang Roll Dhea yang sukses hingga saat
+              ini.
+            </p>
+
+            <p class="font-semibold text-accent-yellow text-white">
+              Filosofi kami sederhana: Kualitas Terbaik, Rasa Paling Lezat!
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <img
+              src="gambar/logo.jpg"
+              alt="Logo Pisang Roll Dhea"
+              class="w-56 h-56 rounded-full shadow-xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact-info"
+        class="py-12 md:py-20 text-center bg-white rounded-xl shadow-2xl max-w-lg mx-auto transform hover:scale-[1.01] transition duration-300"
+      >
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-header-dark mb-4 font-brand"
+        >
+          Hubungi Kami
+        </h2>
+        <p class="text-lg text-gray-500 mb-10">
+          Pesan sekarang dan nikmati kelezatannya!
+        </p>
+
+        <div class="space-y-6 max-w-xs sm:max-w-sm mx-auto">
+          <div class="space-y-4">
+            <p class="text-xl flex items-center justify-center">
+              <i class="fas fa-phone-alt text-xl mr-2 text-primary"></i>
+              <a
+                href="tel:+6287740054578"
+                class="text-header-dark hover:text-primary transition duration-300"
+              >
+                📞 +62 877-4005-4578
+              </a>
+            </p>
+
+            <p class="text-xl flex items-center justify-center">
+              <i class="fab fa-instagram text-xl mr-2 text-primary"></i>
+              <span class="text-gray-700 mr-1">📸 Instagram</span>
+              <a
+                href="https://www.instagram.com/pisangrolldhea"
+                target="_blank"
+                class="font-semibold text-header-dark hover:text-primary transition duration-300"
+              >
+                @pisangrolldhea
+              </a>
+            </p>
+
+            <p class="text-xl flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-xl mr-2 text-primary"></i>
+              <a
+                href="https://maps.google.com/?q=Jl.+Daeng+Tata+3+Lr.+7"
+                target="_blank"
+                class="text-gray-700 hover:text-primary transition duration-300"
+              >
+                📍 Jl. Daeng Tata 3 Lr. 7
+              </a>
+            </p>
+          </div>
+
+          <div class="w-full h-px bg-gray-200 my-8"></div>
+
+          <a
+            href="https://wa.me/6287740054578"
+            target="_blank"
+            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-xl text-white bg-green-500 hover:bg-green-600 transition duration-300 transform hover:scale-[1.03]"
+          >
+            <i class="fab fa-whatsapp text-xl mr-3"></i>
+            Order via WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-header-dark mt-12 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white text-sm">
+          &copy; 2025 Pisang Roll Dhea. Semua Hak Cipta Dilindungi.
+        </p>
+        <p class="text-white text-xs mt-1">
+          Dibuat dengan semangat dan Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

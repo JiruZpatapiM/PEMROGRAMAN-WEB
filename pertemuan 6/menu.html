@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Pisang Roll Dhea</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "header-dark": "#2A4232",
+              "primary-green": "#386641",
+              "secondary-cream": "#F5F5DC",
+              "accent-yellow": "#FFC300",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background-color: #f5f5dc !important;
+      }
+      header {
+        background-color: #2a4232 !important;
+      }
+      footer {
+        background-color: #2a4232 !important;
+      }
+      .font-brand {
+        font-family: "Georgia", serif;
+      }
+
+      /* EFEK HOVER UNTUK TOMBOL */
+      .btn-single {
+        transition: all 0.3s ease;
+      }
+      .btn-single:hover {
+        background-color: #2a4232 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-mix {
+        transition: all 0.3s ease;
+      }
+      .btn-mix:hover {
+        background-color: #ffaa00 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+
+  <body class="text-gray-800 flex flex-col min-h-screen">
+    <header class="shadow-lg sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-white font-brand"
+              >Pisang Roll Dhea</span
+            >
+          </div>
+          <div class="sm:ml-6 sm:flex sm:space-x-8 items-center">
+            <a
+              href="index.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Beranda</a
+            >
+            <a
+              href="aboutus.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Tentang Kami</a
+            >
+            <a
+              href="menu.html"
+              class="text-white hover:bg-green-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Menu</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex-grow">
+      <section id="menu-header" class="py-10 text-center">
+        <h2 class="text-5xl font-extrabold text-header-dark mb-4 font-brand">
+          Menu Pisang Roll Premium
+        </h2>
+        <div
+          class="inline-block bg-accent-yellow text-header-dark px-6 py-2 rounded-full shadow-md font-extrabold text-2xl border-2 border-primary-green"
+        >
+          HARGA MULAI: 10 - 15 RB
+        </div>
+      </section>
+
+    <section id="flyer-menu" class="pb-8 pt-8">
+    <div class="max-w-md mx-auto"> 
+        <img 
+            src="gambar/Menu.jpg" 
+            alt="Flyer Menu Pisang Roll Dhea"
+            class="w-full rounded-lg shadow-xl"
+        />
+    </div>
+</section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol4.jpg"
+                alt="Pisang Roll Coklat"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍫 Coklat Klasik
+            </h3>
+
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 10.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+
+            <p class="text-center text-gray-700 mb-6">
+              Manisnya cokelat lumer berpadu sempurna dengan pisang renyah.
+            </p>
+
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol7.jpg"
+                alt="Pisang Roll Tiramisu"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              ☕ Tiramisu
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 10.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Aroma kopi lembut dengan *topping* tiramisu yang bikin ketagihan.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol10.png"
+                alt="Pisang Roll Green Tea"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍵 Green Tea
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 10.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Paduan rasa pisang manis dengan *matcha* otentik yang wangi.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol8.png"
+                alt="Pisang Roll Strawberry"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍓 Strawberry
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 10.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Ceria dan segar dengan *topping* stroberi yang manis asam.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol3.jpg"
+                alt="Pisang Roll Coklat Keju"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍫/🧀 Coklat/Keju
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 15.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Manis cokelat klasik berpadu gurihnya keju premium.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol2.jpg"
+                alt="Pisang Roll Tiramisu Keju"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍫/☕ Coklat/Tiramisu
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 15.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Kombinasi *creamy* tiramisu dengan sentuhan asin keju.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol1.jpg"
+                alt="Pisang Roll Green Tea Tiramisu"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              🍵/☕ Green Tea/Tiramisu
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 15.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Campuran *matcha* dan kopi yang unik dan kompleks.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+        <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol11.png"
+                alt="Pisang Roll Cokelat Strawberry"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+             🍫/🍓 Coklat/Strawberry
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 15.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Paduan rasa coklat yang creamy dan Strawberry yang manis dan asam.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+        <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol5.jpg"
+                alt="Pisang Roll Cokelat Milo"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+             🍫/🍫 Coklat/Milo
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Rp 15.000 <span class="text-gray-500 text-sm">/ porsi</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Paduan rasa coklat yang creamy dan Bubuk Milo yang membuat rasa coklat nya makin berasa.
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-xl p-6 flex flex-col items-center"
+          >
+            <div
+              class="w-full mb-4 rounded-lg overflow-hidden border-2 border-primary-green"
+            >
+              <img
+                src="gambar/Pisrol6.jpg"
+                alt="Pisang Roll Mix Custom"
+                class="w-full h-50 object-cover"
+              />
+            </div>
+            <h3 class="text-3xl font-extrabold text-primary-green mb-2">
+              ✨ Mix Favoritmu!
+            </h3>
+            <div class="text-xl font-bold text-accent-yellow mb-4">
+              Sesuai Request
+              <span class="text-gray-500 text-sm">/ harga menyesuaikan</span>
+            </div>
+            <p class="text-center text-gray-700 mb-6">
+              Pilih dua rasa kesukaanmu untuk dikombinasikan!
+            </p>
+            <button
+              style="background-color: #386641"
+              class="w-full text-white py-3 rounded-lg transition duration-300 btn-single uppercase font-semibold"
+            >
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-t-2 border-primary-green opacity-20 my-12" />
+    </main>
+
+    <footer class="bg-header-dark mt-12 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white text-sm">
+          &copy; 2025 Pisang Roll Dhea. Semua Hak Cipta Dilindungi.
+        </p>
+        <p class="text-white text-xs mt-1">
+          Dibuat dengan semangat dan Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

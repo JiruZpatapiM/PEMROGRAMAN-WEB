@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - Pisang Roll Dhea</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "#9a3412", // Warna Merah Bata/Coklat untuk Aksi
+                dark: "#7c2d12",
+              },
+              "header-dark": "#2a4232", // Warna Hijau Gelap untuk Header/Footer
+              "background-light": "#f5f5dc", // Warna Background yang sudah ada
+            },
+            fontFamily: {
+              brand: ["Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/cd2f7xK4R+g2l4oKx2RkQkXW2m9aW2s+K/8fA7jA7T/A8dK/e0dG8/G0g/G9w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        background-color: #f5f5dc !important; /* background-light */
+      }
+      header {
+        background-color: #2a4232 !important; /* header-dark */
+      }
+      .font-brand {
+        font-family: "Georgia", serif;
+      }
+      footer {
+        background-color: #2a4232 !important; /* header-dark */
+      }
+    </style>
+  </head>
+
+  <body class="text-gray-800 flex flex-col min-h-screen">
+    <header class="shadow-lg sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-white font-brand"
+              >Pisang Roll Dhea</span
+            >
+          </div>
+          <div class="sm:ml-6 sm:flex sm:space-x-8 items-center">
+            <a
+              href="index.html"
+              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Beranda</a
+            >
+            <a
+              href="aboutus.html"
+              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Tentang Kami</a
+            >
+            <a
+              href="menu.html"
+              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              >Menu</a
+            >
+            <a
+              href="contact.html"
+              class="text-white bg-primary-dark px-3 py-2 rounded-md text-sm font-bold transition duration-300"
+              >Kontak Kami</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex-grow">
+      <section
+        id="contact-info"
+        class="py-12 md:py-20 text-center bg-white rounded-xl shadow-2xl max-w-lg mx-auto transform hover:scale-[1.01] transition duration-300"
+      >
+        <h2
+          class="text-4xl sm:text-5xl font-extrabold text-header-dark mb-4 font-brand"
+        >
+          Hubungi Kami
+        </h2>
+        <p class="text-lg text-gray-500 mb-10">
+          Pesan sekarang dan nikmati kelezatannya!
+        </p>
+
+        <div class="space-y-6 max-w-xs sm:max-w-sm mx-auto">
+          <div class="space-y-4">
+            <p class="text-xl flex items-center justify-center">
+              <i class="fas fa-phone-alt text-xl mr-2 text-primary"></i>
+              <a
+                href="tel:+6287740054578"
+                class="text-header-dark hover:text-primary transition duration-300"
+              >
+                📞 +62 877-4005-4578
+              </a>
+            </p>
+
+            <p class="text-xl flex items-center justify-center">
+              <i class="fab fa-instagram text-xl mr-2 text-primary"></i>
+              <span class="text-gray-700 mr-1">📸 Instagram</span>
+              <a
+                href="https://www.instagram.com/pisangrolldhea"
+                target="_blank"
+                class="font-semibold text-header-dark hover:text-primary transition duration-300"
+              >
+                @pisangrolldhea
+              </a>
+            </p>
+
+            <p class="text-xl flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-xl mr-2 text-primary"></i>
+              <a
+                href="https://maps.google.com/?q=Jl.+Daeng+Tata+3+Lr.+7"
+                target="_blank"
+                class="text-gray-700 hover:text-primary transition duration-300"
+              >
+                📍 Jl. Daeng Tata 3 Lr. 7
+              </a>
+            </p>
+          </div>
+
+          <div class="w-full h-px bg-gray-200 my-8"></div>
+
+          <a
+            href="https://wa.me/6287740054578"
+            target="_blank"
+            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-xl text-white bg-green-500 hover:bg-green-600 transition duration-300 transform hover:scale-[1.03]"
+          >
+            <i class="fab fa-whatsapp text-xl mr-3"></i>
+            Order via WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-header-dark mt-12 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-white text-sm">
+          &copy; 2025 Pisang Roll Dhea. Semua Hak Cipta Dilindungi.
+        </p>
+        <p class="text-white text-xs mt-1">
+          Dibuat dengan semangat dan Tailwind CSS.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
