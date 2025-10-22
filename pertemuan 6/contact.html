@@ -3,54 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontak Kami - Pisang Roll Dhea</title>
+    <title>Kontak - Pisang Roll Dhea</title>
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: {
-                DEFAULT: "#9a3412", // Warna Merah Bata/Coklat untuk Aksi
-                dark: "#7c2d12",
-              },
-              "header-dark": "#2a4232", // Warna Hijau Gelap untuk Header/Footer
-              "background-light": "#f5f5dc", // Warna Background yang sudah ada
-            },
-            fontFamily: {
-              brand: ["Georgia", "serif"],
+              "header-dark": "#2A4232",
+              "primary-green": "#386641",
+              "secondary-cream": "#F5F5DC",
+              "accent-yellow": "#FFC300",
+              primary: "#386641",
             },
           },
         },
       };
     </script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/cd2f7xK4R+g2l4oKx2RkQkXW2m9aW2s+K/8fA7jA7T/A8dK/e0dG8/G0g/G9w=="
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/a2e0e6b5e8.js"
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    ></script>
 
     <style>
       body {
-        background-color: #f5f5dc !important; /* background-light */
+        background-color: #f5f5dc !important;
       }
-      header {
-        background-color: #2a4232 !important; /* header-dark */
+      header,
+      footer {
+        background-color: #2a4232 !important;
       }
       .font-brand {
         font-family: "Georgia", serif;
       }
-      footer {
-        background-color: #2a4232 !important; /* header-dark */
+      nav a.active {
+        background-color: #386641 !important;
+      }
+
+      nav a:hover {
+        transform: translateY(-2px) scale(1.08);
+        background-color: #527a5b;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      .btn-hover:hover {
+        transform: scale(1.05);
+      }
+
+      /* Fade-in on page load */
+      .fade-page {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInPage 0.8s ease forwards;
+      }
+
+      @keyframes fadeInPage {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
 
   <body class="text-gray-800 flex flex-col min-h-screen">
+    <!-- ==== HEADER ==== -->
     <header class="shadow-lg sticky top-0 z-50">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -62,33 +86,97 @@
           <div class="sm:ml-6 sm:flex sm:space-x-8 items-center">
             <a
               href="index.html"
-              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              class="text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
               >Beranda</a
             >
             <a
               href="aboutus.html"
-              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              class="text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
               >Tentang Kami</a
             >
             <a
               href="menu.html"
-              class="text-white hover:bg-header-dark/80 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
+              class="text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300"
               >Menu</a
             >
             <a
               href="contact.html"
-              class="text-white bg-primary-dark px-3 py-2 rounded-md text-sm font-bold transition duration-300"
-              >Kontak Kami</a
+              class="text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300 active"
+              >Kontak</a
             >
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex-grow">
+    <!-- ==== ISI HALAMAN KONTAK ==== -->
+    <main class="flex-grow fade-page">
+      <!-- FORM KONTAK -->
+      <section class="max-w-5xl mx-auto py-16 px-6 text-center">
+        <h1 class="text-4xl font-brand text-primary-green mb-4">Kirim Pesan</h1>
+        <p class="text-gray-700 max-w-2xl mx-auto mb-8">
+          Kami senang mendengar dari Anda! Silakan isi formulir di bawah ini
+          untuk menghubungi kami secara langsung.
+        </p>
+
+        <form
+          class="bg-white shadow-lg rounded-xl p-8 max-w-2xl mx-auto space-y-6"
+        >
+          <div class="text-left">
+            <label for="nama" class="block text-sm font-semibold text-gray-700"
+              >Nama</label
+            >
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+
+          <div class="text-left">
+            <label for="email" class="block text-sm font-semibold text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"
+              placeholder="Masukkan email Anda"
+              required
+            />
+          </div>
+
+          <div class="text-left">
+            <label for="pesan" class="block text-sm font-semibold text-gray-700"
+              >Pesan</label
+            >
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="5"
+              class="w-full mt-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"
+              placeholder="Tulis pesan Anda di sini..."
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-primary-green text-white px-6 py-3 rounded-lg btn-hover"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </section>
+
+      <!-- INFO KONTAK -->
       <section
         id="contact-info"
-        class="py-12 md:py-20 text-center bg-white rounded-xl shadow-2xl max-w-lg mx-auto transform hover:scale-[1.01] transition duration-300"
+        class="py-12 md:py-20 text-center bg-white rounded-xl shadow-2xl max-w-lg mx-auto transform hover:scale-[1.01] transition duration-300 fade-in"
       >
         <h2
           class="text-4xl sm:text-5xl font-extrabold text-header-dark mb-4 font-brand"
@@ -137,27 +225,48 @@
 
           <div class="w-full h-px bg-gray-200 my-8"></div>
 
-          <a
-            href="https://wa.me/6287740054578"
-            target="_blank"
-            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-xl text-white bg-green-500 hover:bg-green-600 transition duration-300 transform hover:scale-[1.03]"
+          <button
+            onclick="window.open('https://wa.me/6287740054578?text=Halo%20Kak,%20saya%20mau%20pesan%20Pisang%20Roll%20Dhea!','_blank')"
+            style="background-color: #386641"
+            class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-xl text-white hover:bg-green-600 transition duration-300 transform hover:scale-[1.03] btn-hover"
           >
             <i class="fab fa-whatsapp text-xl mr-3"></i>
             Order via WhatsApp
-          </a>
+          </button>
         </div>
       </section>
     </main>
 
-    <footer class="bg-header-dark mt-12 py-6">
+    <!-- ==== FOOTER ==== -->
+    <footer class="mt-12 py-6">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="text-white text-sm">
           &copy; 2025 Pisang Roll Dhea. Semua Hak Cipta Dilindungi.
         </p>
-        <p class="text-white text-xs mt-1">
-          Dibuat dengan semangat dan Tailwind CSS.
-        </p>
       </div>
     </footer>
+
+    <script>
+      // animasi fade-in
+      window.addEventListener("scroll", () => {
+        document.querySelectorAll(".fade-in").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("visible");
+          }
+        });
+      });
+
+      // === Navbar active state ===
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll("nav a").forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+            link.style.backgroundColor = "#386641"; // warna hijau tua biar sama semua
+          }
+        });
+      });
+    </script>
   </body>
 </html>
