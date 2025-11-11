@@ -1,0 +1,8 @@
+# Abaikan semua file .exe
+*.exe
+
+# Abaikan folder vendor (jika Anda pakai Composer nanti)
+/vendor/
+
+# Abaikan file environment (berisi password)
+.env
